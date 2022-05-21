@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Index */
+
+header {
+    background-color: rgba(231, 198, 13, 0.979);
+    height: 120px;
+    border-bottom: 1px solid black;
+}
+
+header img {
+    display: block;
+    margin: 0px auto;
+    padding-top: 15px;
+}
+
+#navegador {
+    background-color: orange;
+    margin: 0px auto;
+}
+
+#navegador ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navegador ul li {
+    padding: 15px;
+    list-style: none;
+    color: #fff;
+}
+
+#navegador ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+#container {
+    background-image: url(./img-omma/01.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 600px;
+}
+
+#container h2 {
+    text-align: right;
+    padding: 200px 100px;
+    color: #fff;
+    text-shadow: 0.1em 0.1em 0.2em #000;
+    font-size: 60px;
+}
+
+#container h3 {
+    text-align: right;
+    padding: 0px 47px;
+    margin-top: -210px;
+    color: #fff;
+    text-shadow: 0.1em 0.1em 0.2em #000;
+    font-size: 60px;
+}
+
+#receitas h1 {
+    font-size: 45px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    color: orange;
+}
+
+#container-receitas {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 100px;
+}
+
+#receitas .comida img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+#receitas .comida h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 520;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#receitas .comida button {
+    height: 10%;
+    width: 40%;
+    background-color: rgb(1, 94, 1);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900;
+    margin-left: 85px;
+    font-size: 15px;
+    border: none;
+}
+
+#container-viver {
+    background-image: url(./img-omma/02.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 600px;
+}
+
+#container-viver h2 {
+    text-align: left;
+    padding-left: 150px;
+    padding-top: 150px;
+    color: #fff;
+    text-shadow: 0.1em 0.1em 0.2em #000;
+    font-size: 60px;
+}
+
+#container-viver p {
+    text-align: left;
+    padding-left: 150px;
+    padding-right: 900px;
+    color: #fff;
+    font-size: 20px;
+}
+
+#container-viver #p1 {
+    padding-top: 30px;
+}
+
+#container-viver #p2 {
+    padding-top: 10px;
+}
+
+footer {
+    background-color: rgba(231, 198, 13, 0.979);
+    display: flex;
+}
+
+footer img {
+    padding-top: 5px;
+}
+
+footer span {
+    color: #fff;
+    font-size: 17px;
+    padding-left: 50px;
+    padding-top: 40px;
+    font-weight: 700;
+}
+
+/* risoto */
+
+#container-risoto {
+    display: flex;
+    justify-content: space-evenly;
+    width: 75%;
+    padding-left: 200px;
+    padding-top: 60px;
+}
+
+aside {
+    width: 100%;
+    padding-right: 200px;
+    padding-top: 50px;
+}
+
+#container-img h1 {
+    color: orange;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#container-img img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#container-img .info {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+#container-ingredientes ul {
+    padding-bottom: 40px;
+
+}
+
+#container-ingredientes ul li {
+    list-style: none;
+    font-weight: 100;
+}
+
+#container-img h4 {
+    color: green;
+    border: 1px solid green;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: 550;
+}
+
+#container-img .info .h4 {
+    margin-left: 10px;
+}
+
+.container-titulo {
+    padding-bottom: 20px;
+}
+
+#video {
+    padding-bottom: 40px;
+}
+
+#mododepreparo p{
+    width: 47%;
+    padding-bottom: 100px;
+    font-weight: 100;
+}
+
+.receitasrelacionadas {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+aside h2 {
+    color: orange;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+aside img {
+    width: 300px;
+}
+
+aside span {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 0.1px grey;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
