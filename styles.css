@@ -3,12 +3,21 @@
     padding: 0;
 }
 
+:root {
+    --color-header: #ffc107;
+    --color-nav: orange;
+    --color-black: black;
+    --color-white: white;
+    --color-green: rgb(1, 98, 1);
+    --color-grey: grey;
+}
+
 /* Index */
 
 header {
-    background-color: rgba(231, 198, 13, 0.979);
+    background-color: var(--color-header);
     height: 120px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--color-black);
 }
 
 header img {
@@ -18,7 +27,7 @@ header img {
 }
 
 #navegador {
-    background-color: orange;
+    background-color: var(--color-nav);
     margin: 0px auto;
 }
 
@@ -31,11 +40,11 @@ header img {
 #navegador ul li {
     padding: 15px;
     list-style: none;
-    color: #fff;
+    color: var(--color-white);
 }
 
 #navegador ul li a {
-    color: #fff;
+    color: var(--color-white);
     text-decoration: none;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -53,8 +62,8 @@ header img {
 #container h2 {
     text-align: right;
     padding: 200px 100px;
-    color: #fff;
-    text-shadow: 0.1em 0.1em 0.2em #000;
+    color: var(--color-white);
+    text-shadow: 0.1em 0.1em 0.2em var(--color-black);
     font-size: 60px;
 }
 
@@ -62,8 +71,8 @@ header img {
     text-align: right;
     padding: 0px 47px;
     margin-top: -210px;
-    color: #fff;
-    text-shadow: 0.1em 0.1em 0.2em #000;
+    color: var(--color-white);
+    text-shadow: 0.1em 0.1em 0.2em var(--color-black);
     font-size: 60px;
 }
 
@@ -72,7 +81,7 @@ header img {
     text-align: center;
     padding-top: 50px;
     padding-bottom: 30px;
-    color: orange;
+    color: var(--color-nav);
 }
 
 #container-receitas {
@@ -81,13 +90,13 @@ header img {
     padding-bottom: 100px;
 }
 
-#receitas .comida img {
+#receitas .comida img, #container-todasasreceitas .receita .imagem-comida {
     width: 300px;
     height: 300px;
     object-fit: cover;
 }
 
-#receitas .comida h2 {
+#receitas .comida .nome-comida, #container-todasasreceitas .receita .nome-comida {
     text-align: center;
     font-size: 25px;
     font-weight: 520;
@@ -95,11 +104,11 @@ header img {
     padding-bottom: 10px;
 }
 
-#receitas .comida button {
+#receitas .comida .button {
     height: 10%;
     width: 40%;
-    background-color: rgb(1, 94, 1);
-    color: #fff;
+    background-color: var(--color-green);
+    color: var(--color-white);
     cursor: pointer;
     font-weight: 900;
     margin-left: 85px;
@@ -113,22 +122,25 @@ header img {
     background-size: cover;
     background-position: center center;
     height: 600px;
+    display: flex;
+    flex-direction: column;
+
 }
 
 #container-viver h2 {
     text-align: left;
     padding-left: 150px;
     padding-top: 150px;
-    color: #fff;
-    text-shadow: 0.1em 0.1em 0.2em #000;
+    color: var(--color-white);
+    text-shadow: 0.1em 0.1em 0.2em var(--color-black);
     font-size: 60px;
 }
 
 #container-viver p {
     text-align: left;
     padding-left: 150px;
-    padding-right: 900px;
-    color: #fff;
+    width: 40%;
+    color: var(--color-white);
     font-size: 20px;
 }
 
@@ -141,40 +153,38 @@ header img {
 }
 
 footer {
-    background-color: rgba(231, 198, 13, 0.979);
+    background-color: var(--color-header);
     display: flex;
-}
-
-footer img {
-    padding-top: 5px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
 }
 
 footer span {
-    color: #fff;
+    color: var(--color-white);
     font-size: 17px;
-    padding-left: 50px;
-    padding-top: 40px;
+    padding-top: 35px;
     font-weight: 700;
+    word-wrap: break-word;
 }
 
 /* risoto */
 
 #container-risoto {
     display: flex;
-    justify-content: space-evenly;
-    width: 75%;
-    padding-left: 200px;
+    justify-content: space-around;
+    margin-left: 50px;
     padding-top: 60px;
 }
 
 aside {
     width: 100%;
-    padding-right: 200px;
+    margin-right: 100px;
     padding-top: 50px;
 }
 
-#container-img h1 {
-    color: orange;
+#container-img h1, #titulo-todasasreceitas h1 {
+    color: var(--color-nav);
     font-size: 50px;
     font-weight: 600;
 }
@@ -205,8 +215,8 @@ aside {
 }
 
 #container-img h4 {
-    color: green;
-    border: 1px solid green;
+    color: var(--color-green);
+    border: 1px solid var(--color-green);
     border-radius: 10px;
     padding-top: 2px;
     padding-right: 20px;
@@ -239,7 +249,7 @@ aside {
 }
 
 aside h2 {
-    color: orange;
+    color: var(--color-nav);
     font-weight: 500;
     padding-bottom: 20px;
 }
@@ -252,8 +262,339 @@ aside span {
     font-weight: 500;
     font-size: 20px;
     margin-bottom: 40px;
-    box-shadow: 1px 1px 0.1px grey;
+    box-shadow: 1px 1px 0.1px var(--color-grey);
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    width: 300px;
+}
+
+/* Todas as receitas */
+
+#titulo-todasasreceitas h1 {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#container-todasasreceitas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#container-todasasreceitas .receita {
+    display: flex;
+    flex-direction: column;
+    padding: 90px;
+}
+
+#container-todasasreceitas .receita .button {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 15px;
+    border: none;
+    margin-left: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Contato */
+
+#container-mandaumalo {
+    background: url(./img-omma/familia-cozinhando.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+}
+
+#container-mandaumalo h2 {
+    text-align: left;
+    padding-left: 80px;
+    padding-top: 80px;
+    color: var(--color-white);
+    text-shadow: 0.1em 0.1em 0.2em var(--color-black);
+    font-size: 60px;
+    word-wrap: break-word;
+    width: 280px;
+}
+
+#container-contato {
+    display: flex;
+    justify-content: center;
+}
+
+#imagem-celular {
+    margin-left: 30px;
+    margin-right: 5px;
+    border-radius: 20px;
+}
+
+#contato {
+    margin-left: 5px;
+    margin-right: 30px;
+}
+
+#imagem-celular, #contato {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    border: 1px solid var(--color-nav);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#contato legend {
+    font-size: 35px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    color: var(--color-nav);
+}
+
+#contato .dados, #mensagem-dados  {
+    border: 1px solid var(--color-nav);
+    margin: 10px;
+    padding: 5px;
+    padding-left: 30px;
+    color: var(--color-grey);
+    border-radius: 10px;
+}
+
+#contato .dados input {
+    border: none;
+}
+
+#mensagem-dados {
+    padding-bottom: 250px;
+    padding-left: 0px;
+    padding-top: 20px;
+    margin: 0px;
+}
+
+#contato .button-contato {
+    width: 25%;
+    margin: 10px;
+    color: var(--color-white);
+    background-color: var(--color-header);
+    font-weight: 800;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+/* Responsividade */
+
+@media only screen and (max-width: 990px) {
+    #container-receitas .comida img{
+        width: 200px;
+        height: 200px;
+    }
+
+    #container-receitas .comida .button {
+        margin-left: 60px;
+    }
+
+    #container-img img {
+        width: 400px;
+    }
+
+    #container-risoto main {
+        margin: 40px;
+    }
+
+    aside img, aside span {
+        width: 200px;
+    }
+
+    iframe {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    /* index */
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer a, footer span {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer span {
+        padding-top: 0px;
+    }
+
+    #receitas .comida .button {
+        font-size: 10px;
+    }
+
+    #container-receitas .comida img{
+        width: 140px;
+        height: 140px;
+    }
+
+    #container-receitas .comida .nome-comida {
+        font-size: 15px;
+    }
+
+    #container-receitas .comida .button {
+        margin-left: 40px;
+    }
+
+    #container-viver h2, #container-viver p {
+        padding-left: 80px;
+    }
+
+    #container-viver h2 {
+        font-size: 50px;
+    }
+
+    /* todas as receitas */
+
+    #container-todasasreceitas .receita {
+        padding: 40px;
+    }
+
+    /* risoto  */
+
+    #container-img h1 {
+        font-size: 40px;
+    }
+
+    #container-img img {
+        width: 300px;
+        height: 200px;
+    }
+
+    iframe {
+        width: 250px;
+        height: 200px;
+    }
+
+    #imagem-celular {
+        display: none;
+    }
+
+    #contato {
+        margin-inline: 0px;
+        width: 300px;
+    }
+}
+
+/* iPhone X */
+@media only screen and (max-width: 414px) {
+
+    /* index */
+
+    #container {
+        height: 300px;
+    }
+
+    #container h2, #container h3 {
+        font-size: 40px;
+    }
+
+    #container h3 {
+        padding-inline: 67px;
+    }
+
+    #receitas h1 {
+        font-size: 35px;
+    }
+
+    #container-receitas .comida img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #container-receitas .comida .button {
+        margin-left: 30px;
+    }
+
+    #container-viver {
+        height: 500px;
+    }
+
+    #container-viver h2, #container-viver p {
+        padding-left: 60px;
+    }
+
+    #container-viver h2 {
+        font-size: 35px;
+    }
+
+    #container-viver p {
+        font-size: 15px;
+    }
+
+    /* todas as receitas */
+
+    #titulo-todasasreceitas h1 {
+        font-size: 35px;
+    }
+
+    #titulo-todasasreceitas .receita {
+        padding: 30px;
+    }
+
+    #container-todasasreceitas .receita .imagem-comida {
+        width: 200px;
+        height: 200px;
+    }
+
+    #container-todasasreceitas .receita .button {
+        margin-left: 50px;
+    }
+    
+    /* risoto */
+    
+    #container-risoto {
+       flex-direction: column; 
+       justify-content: center;
+       margin-left: 0px;
+       padding-top: 20px;
+    }
+
+    #mododepreparo p {
+        padding-bottom: 0px;
+    }
+
+    aside {
+        padding-top: 0px;
+        margin-right: 0px;
+    }
+
+    aside h2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    aside .receitasrelacionadas {
+        justify-content: center;
+        align-items: center;
+    }
+
+    aside span {
+        width: 200px;
+    }
+
+    #container-mandaumalo h2 {
+        font-size: 46px;
+    }
 }
